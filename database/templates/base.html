@@ -1,0 +1,17 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Database</title>
+</head>
+
+<body>
+    <h1>{% block header_text %}{% endblock %}</h1>
+    <form method="POST" action="/lists/search">
+        <label for="search_query">Search</label>
+        <input name="media_search" id="search_query" />
+        {% csrf_token %}
+    </form>
+</body>
+</html>
