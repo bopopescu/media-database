@@ -1,1 +1,8 @@
-add
+<form {{action "save" on="submit"}}>
+  {{form-field label="title" value=model.title}}
+  {{form-field label="rating" value=model.rating}}
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-block btn-primary">Save</button>
+  </div>
+</form>

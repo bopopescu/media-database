@@ -1,8 +1,12 @@
 # media-database
-To run, make sure you have Django v1.8 and Ember v1.7 installed. 
+To run, make sure you have Django v1.8 and Ember-CLI v0.2.7 installed. 
 
 FRONT
-cd into frontend, then type ember serve. Navigate to localhost:4200
+cd into frontend
+type ember serve
+navigate to localhost:4200
 
 BACK
-cd into backend, then type python manage.py runserver. Navigate to localhost:8000
+cd into backend
+type python manage.py runserver
+navigate to localhost:8000
