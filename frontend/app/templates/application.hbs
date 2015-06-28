@@ -1,0 +1,13 @@
+<section id="mediaapp">
+    <header id="header">
+        <h1>Media Database</h1>
+    </header>
+    {{#link-to 'media.index'}}Home{{/link-to}}
+    {{#link-to 'media.add'}}New{{/link-to}}
+    {{search-bar action='search'}}
+    {{outlet}}
+</section>
+ 
+<footer id="info">
+    <p>&copy; 2015, Xilin and Brian</p>
+</footer>

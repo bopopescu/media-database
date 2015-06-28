@@ -1,0 +1,28 @@
+NAME
+
+      gcloud info - display information about the current gcloud environment
+
+SYNOPSIS
+
+      gcloud info [--show-log] [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      This command displays information about the current gcloud environment.
+
+FLAGS
+
+      --show-log
+
+         Print the contents of the last log file.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help or $ gcloud --help for a description of the global flags
+      available to all commands.
+
+NOTES
+
+      This command is in the Google Cloud SDK core component. See installing
+      components if it is not installed.
+

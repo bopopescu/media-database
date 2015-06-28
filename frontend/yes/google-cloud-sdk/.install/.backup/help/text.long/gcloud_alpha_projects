@@ -1,0 +1,36 @@
+NAME
+
+      gcloud alpha projects - manage your Projects
+
+SYNOPSIS
+
+      gcloud alpha projects COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Commands to get information about your Google Developer Projects.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help or $ gcloud --help for a description of the global flags
+      available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         (ALPHA) Show metadata for a Project.
+
+      list
+
+         (ALPHA) List all active Projects.
+
+NOTES
+
+      This command is in the Google Cloud SDK alpha component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

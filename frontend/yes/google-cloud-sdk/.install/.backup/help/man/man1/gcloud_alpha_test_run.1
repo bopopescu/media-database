@@ -1,0 +1,147 @@
+.TH "GCLOUD ALPHA TEST RUN" "1" "" "" ""
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+.HP
+gcloud_alpha_test_run \- encapsulation of the \*(Aqgcloud test run\*(Aq command
+.SH "SYNOPSIS"
+.sp
+gcloud alpha test run [\fIARGSPEC\fR] [\fB\-\-app\fR \fIAPP\fR, \fB\-a\fR \fIAPP\fR] [\fB\-\-app\-initial\-activity\fR \fIAPP_INITIAL_ACTIVITY\fR] [\fB\-\-app\-package\fR \fIAPP_PACKAGE\fR, \fB\-A\fR \fIAPP_PACKAGE\fR] [\fB\-\-async\fR] [\fB\-\-bootstrap\-apk\fR \fIBOOTSTRAP_APK\fR] [\fB\-\-bootstrap\-package\fR \fIBOOTSTRAP_PACKAGE\fR] [\fB\-\-bootstrap\-runner\-class\fR \fIBOOTSTRAP_RUNNER_CLASS\fR] [\fB\-\-device\-ids\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...], \fB\-d\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...]] [\fB\-\-event\-count\fR \fIint\fR] [\fB\-\-event\-delay\fR \fIint\fR] [\fB\-\-locales\fR \fILOCALE\fR,[\fILOCALE\fR,\&...], \fB\-l\fR \fILOCALE\fR,[\fILOCALE\fR,\&...]] [\fB\-\-max\-depth\fR \fIint\fR] [\fB\-\-max\-steps\fR \fIint\fR] [\fB\-\-orientations\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...], \fB\-o\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...]] [\fB\-\-os\-version\-ids\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...], \fB\-v\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...]] [\fB\-\-random\-seed\fR \fIint\fR] [\fB\-\-results\-bucket\fR \fIRESULTS_BUCKET\fR, \fB\-b\fR \fIRESULTS_BUCKET\fR] [\fB\-\-results\-history\-name\fR \fIRESULTS_HISTORY_NAME\fR, \fB\-H\fR \fIRESULTS_HISTORY_NAME\fR] [\fB\-\-test\fR \fITEST\fR, \fB\-t\fR \fITEST\fR] [\fB\-\-test\-package\fR \fITEST_PACKAGE\fR, \fB\-T\fR \fITEST_PACKAGE\fR] [\fB\-\-test\-runner\-class\fR \fITEST_RUNNER_CLASS\fR, \fB\-r\fR \fITEST_RUNNER_CLASS\fR] [\fB\-\-test\-targets\fR \fITEST_TARGET\fR,[\fITEST_TARGET\fR,\&...]] [\fB\-\-timeout\fR \fITIMEOUT\fR] [\fB\-\-type\fR \fITYPE\fR, \fB\-y\fR \fITYPE\fR] [\fIGLOBAL\-FLAG \&...\fR]
+.SH "DESCRIPTION"
+.sp
+\fB(ALPHA)\fR Invoke a test in the Google Cloud Test Lab and monitor results\&.
+.SH "POSITIONAL ARGUMENTS"
+.HP
+[\fIARGSPEC\fR]
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-app\fR \fIAPP\fR, \fB\-a\fR \fIAPP\fR
+.RS 4
+Local or GCS path to the application binary file\&.
+.RE
+.PP
+\fB\-\-app\-initial\-activity\fR \fIAPP_INITIAL_ACTIVITY\fR
+.RS 4
+The initial activity that should be used to start the app during a Robo test\&.
+.RE
+.PP
+\fB\-\-app\-package\fR \fIAPP_PACKAGE\fR, \fB\-A\fR \fIAPP_PACKAGE\fR
+.RS 4
+The Java package of the application under test (default: extracted from the APK manifest)\&.
+.RE
+.PP
+\fB\-\-async\fR
+.RS 4
+Invoke a test asynchronously without waiting for test results\&.
+.RE
+.PP
+\fB\-\-bootstrap\-apk\fR \fIBOOTSTRAP_APK\fR
+.RS 4
+The APK used for bootstrapping a Robo test (e\&.g\&., passing the login screen)\&.
+.RE
+.PP
+\fB\-\-bootstrap\-package\fR \fIBOOTSTRAP_PACKAGE\fR
+.RS 4
+The java package id for the bootstrap during a Robo test\&.
+.RE
+.PP
+\fB\-\-bootstrap\-runner\-class\fR \fIBOOTSTRAP_RUNNER_CLASS\fR
+.RS 4
+The fully\-qualified Java class name of the bootstrap runner\&.
+.RE
+.PP
+\fB\-\-device\-ids\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...], \fB\-d\fR \fIDEVICE_ID\fR,[\fIDEVICE_ID\fR,\&...]
+.RS 4
+The device ID(s) to test against\&.
+.RE
+.PP
+\fB\-\-event\-count\fR \fIint\fR
+.RS 4
+Number of simulated user events to create during a monkey test (default: 1000)\&.
+.RE
+.PP
+\fB\-\-event\-delay\fR \fIint\fR
+.RS 4
+Fixed delay in milliseconds inserted between simulated events (default: 0)\&.
+.RE
+.PP
+\fB\-\-locales\fR \fILOCALE\fR,[\fILOCALE\fR,\&...], \fB\-l\fR \fILOCALE\fR,[\fILOCALE\fR,\&...]
+.RS 4
+The Android locale(s) to test against\&.
+.RE
+.PP
+\fB\-\-max\-depth\fR \fIint\fR
+.RS 4
+The maximum depth of the traversal stack a Robo test can explore (default: 50)\&.
+.RE
+.PP
+\fB\-\-max\-steps\fR \fIint\fR
+.RS 4
+The maximum number of steps/actions a Robo test can execute (default: no limit)\&.
+.RE
+.PP
+\fB\-\-orientations\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...], \fB\-o\fR \fIORIENTATION\fR,[\fIORIENTATION\fR,\&...]
+.RS 4
+The device orientation(s) to test against, i\&.e\&. "portrait" and/or "landscape"\&.
+.RE
+.PP
+\fB\-\-os\-version\-ids\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...], \fB\-v\fR \fIOS_VERSION_ID\fR,[\fIOS_VERSION_ID\fR,\&...]
+.RS 4
+The Android OS version ID(s) to test against\&.
+.RE
+.PP
+\fB\-\-random\-seed\fR \fIint\fR
+.RS 4
+Seed value for a monkey test pseudo\-random number generator (default: 0)\&.
+.RE
+.PP
+\fB\-\-results\-bucket\fR \fIRESULTS_BUCKET\fR, \fB\-b\fR \fIRESULTS_BUCKET\fR
+.RS 4
+The name of a GCS bucket where test results will be stored (default: "cloud\-test\-<project\-id>")\&.
+.RE
+.PP
+\fB\-\-results\-history\-name\fR \fIRESULTS_HISTORY_NAME\fR, \fB\-H\fR \fIRESULTS_HISTORY_NAME\fR
+.RS 4
+The name of a Tool Results history to publish test results to (default: "<app\-package name> (gcloud)")\&.
+.RE
+.PP
+\fB\-\-test\fR \fITEST\fR, \fB\-t\fR \fITEST\fR
+.RS 4
+Local or GCS path to the test binary file\&.
+.RE
+.PP
+\fB\-\-test\-package\fR \fITEST_PACKAGE\fR, \fB\-T\fR \fITEST_PACKAGE\fR
+.RS 4
+The Java package name of the test (default: extracted from the APK manifest)\&.
+.RE
+.PP
+\fB\-\-test\-runner\-class\fR \fITEST_RUNNER_CLASS\fR, \fB\-r\fR \fITEST_RUNNER_CLASS\fR
+.RS 4
+The fully\-qualified Java class name of the instrumentation test runner (default: the last name extracted from the APK manifest)\&.
+.RE
+.PP
+\fB\-\-test\-targets\fR \fITEST_TARGET\fR,[\fITEST_TARGET\fR,\&...]
+.RS 4
+One or more test targets to be run\&. Each target must be fully qualified with the package name or class name, in one of these formats: "package package_name" "class package_name\&.class_name" "class package_name\&.class_name#method_name"\&.
+.RE
+.PP
+\fB\-\-timeout\fR \fITIMEOUT\fR
+.RS 4
+The max time this test execution can run before it is cancelled\&.
+.RE
+.PP
+\fB\-\-type\fR \fITYPE\fR, \fB\-y\fR \fITYPE\fR
+.RS 4
+The type of test to run (default: instrumentation)\&.
+.RE
+.SH "GLOBAL FLAGS"
+.sp
+Run \fB$ \fR\fBgcloud\fR\fB help\fR or \fB$ \fR\fBgcloud\fR\fB \-\-help\fR for a description of the global flags available to all commands\&.
+.SH "NOTES"
+.sp
+This command is in the Google Cloud SDK \fBgcloud\fR component\&. See installing components if it is not installed\&.
+.sp
+This command is currently in ALPHA and may change without notice\&.

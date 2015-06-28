@@ -1,0 +1,37 @@
+NAME
+
+      gcloud alpha test devices - command group for discovery of device
+         environments
+
+SYNOPSIS
+
+      gcloud alpha test devices COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Command group for discovery of device environments.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help or $ gcloud --help for a description of the global flags
+      available to all commands.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      describe
+
+         (ALPHA) Describe a specific test device environment in detail.
+
+      list
+
+         (ALPHA) List all device environments available for testing.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+

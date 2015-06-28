@@ -1,0 +1,42 @@
+NAME
+
+      gcloud alpha test - invoke tests in the cloud, monitor their progress, and
+         report results
+
+SYNOPSIS
+
+      gcloud alpha test GROUP | COMMAND [GLOBAL-FLAG ...]
+
+DESCRIPTION
+
+      (ALPHA) Invoke tests in the cloud, monitor their progress, and report
+      results.
+
+GLOBAL FLAGS
+
+      Run $ gcloud help or $ gcloud --help for a description of the global flags
+      available to all commands.
+
+GROUPS
+
+      GROUP is one of the following:
+
+      devices
+
+         (ALPHA) Command group for discovery of device environments.
+
+COMMANDS
+
+      COMMAND is one of the following:
+
+      run
+
+         (ALPHA) Encapsulation of the 'gcloud test run' command.
+
+NOTES
+
+      This command is in the Google Cloud SDK gcloud component. See installing
+      components if it is not installed.
+
+      This command is currently in ALPHA and may change without notice.
+
