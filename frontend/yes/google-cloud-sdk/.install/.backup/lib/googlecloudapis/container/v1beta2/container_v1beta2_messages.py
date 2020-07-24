@@ -24,8 +24,8 @@ class Cluster(_messages.Message):
       172.16.0.0/12.
     creationTimestamp: [Output only] The time the cluster was created, in
       RFC3339 text format.
-    currentMasterVersion: [Output only] The current software version of the
-      master endpoint.
+    currentMainVersion: [Output only] The current software version of the
+      main endpoint.
     currentNodeVersion: [Output only] The current version of the node software
       components. If they are currently at different versions because they're
       in the process of being upgraded, this reflects the minimum version of
@@ -37,14 +37,14 @@ class Cluster(_messages.Message):
       components themselves.
     enableCloudMonitoring: Whether metrics from the cluster should be made
       available via the Google Cloud Monitoring service.
-    endpoint: [Output only] The IP address of this cluster's Kubernetes master
+    endpoint: [Output only] The IP address of this cluster's Kubernetes main
       endpoint. The endpoint can be accessed from the internet at
-      https://username:password@endpoint/.  See the masterAuth property of
+      https://username:password@endpoint/.  See the mainAuth property of
       this resource for username and password information.
     initialClusterVersion: [Output only] The software version of Kubernetes
-      master and kubelets used in the cluster when it was first created. The
+      main and kubelets used in the cluster when it was first created. The
       version can be upgraded over time.
-    masterAuth: The authentication information for accessing the master.
+    mainAuth: The authentication information for accessing the main.
     name: The name of this cluster. The name must be unique within this
       project and zone, and can be up to 40 characters with the following
       restrictions:   - Lowercase letters, numbers, and hyphens only. - Must
@@ -88,14 +88,14 @@ class Cluster(_messages.Message):
 
   containerIpv4Cidr = _messages.StringField(1)
   creationTimestamp = _messages.StringField(2)
-  currentMasterVersion = _messages.StringField(3)
+  currentMainVersion = _messages.StringField(3)
   currentNodeVersion = _messages.StringField(4)
   description = _messages.StringField(5)
   enableCloudLogging = _messages.BooleanField(6)
   enableCloudMonitoring = _messages.BooleanField(7)
   endpoint = _messages.StringField(8)
   initialClusterVersion = _messages.StringField(9)
-  masterAuth = _messages.MessageField('MasterAuth', 10)
+  mainAuth = _messages.MessageField('MainAuth', 10)
   name = _messages.StringField(11)
   network = _messages.StringField(12)
   nodeConfig = _messages.MessageField('NodeConfig', 13)
@@ -112,13 +112,13 @@ class ClusterUpdate(_messages.Message):
   """A ClusterUpdate object.
 
   Fields:
-    desiredMasterVersion: The Kubernetes version to change the master to
+    desiredMainVersion: The Kubernetes version to change the main to
       (typically an upgrade).
     desiredNodeVersion: The Kubernetes version to change the nodes to
       (typically an upgrade).
   """
 
-  desiredMasterVersion = _messages.MessageField('ClusterVersion', 1)
+  desiredMainVersion = _messages.MessageField('ClusterVersion', 1)
   desiredNodeVersion = _messages.MessageField('ClusterVersion', 2)
 
 
@@ -308,16 +308,16 @@ class ListOperationsResponse(_messages.Message):
   operations = _messages.MessageField('Operation', 1, repeated=True)
 
 
-class MasterAuth(_messages.Message):
-  """The authentication information for accessing the master endpoint.
+class MainAuth(_messages.Message):
+  """The authentication information for accessing the main endpoint.
   Authentication is done using HTTP basic authentication.
 
   Fields:
     password: The password to use for HTTP basic authentication when accessing
-      the Kubernetes master endpoint. Because the master endpoint is open to
+      the Kubernetes main endpoint. Because the main endpoint is open to
       the internet, you should create a strong password.
     user: The username to use for HTTP basic authentication when accessing the
-      Kubernetes master endpoint.
+      Kubernetes main endpoint.
   """
 
   password = _messages.StringField(1)
@@ -371,12 +371,12 @@ class Operation(_messages.Message):
     Values:
       createCluster: <no description>
       deleteCluster: <no description>
-      upgradeMaster: <no description>
+      upgradeMain: <no description>
       upgradeNodes: <no description>
     """
     createCluster = 0
     deleteCluster = 1
-    upgradeMaster = 2
+    upgradeMain = 2
     upgradeNodes = 3
 
   class StatusValueValuesEnum(_messages.Enum):

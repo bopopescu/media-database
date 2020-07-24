@@ -190,7 +190,7 @@ class ContainerV1beta2(base_api.BaseApiClient):
           }
 
     def Create(self, request, global_params=None):
-      """Creates a cluster, consisting of the specified number and type of Google Compute Engine instances, plus a Kubernetes master endpoint.
+      """Creates a cluster, consisting of the specified number and type of Google Compute Engine instances, plus a Kubernetes main endpoint.
 
 By default, the cluster is created in the project's default network.
 
